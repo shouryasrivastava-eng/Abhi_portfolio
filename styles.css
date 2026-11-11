@@ -1,0 +1,102 @@
+/* Custom CSS styles for Abhi Srivastava Portfolio */
+
+/* Smooth custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Ambient Grid Pattern */
+.ambient-grid {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, #000 70%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, #000 70%, transparent 100%);
+}
+
+/* Navigation blur and scrolled state */
+.nav-scrolled {
+  background-color: rgba(9, 13, 22, 0.85);
+  border-color: rgba(30, 41, 59, 0.8) !important;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+/* Active navigation link */
+.nav-link.active {
+  color: #60a5fa !important;
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+/* Skill Tabs Active */
+.skill-tab-btn {
+  color: #94a3b8;
+  background: transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.skill-tab-btn:hover {
+  color: #f8fafc;
+}
+
+.skill-tab-btn.active {
+  color: #ffffff;
+  background: #3b82f6;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* Card hover glow transitions */
+.project-card, .skill-card {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.25s ease, 
+              box-shadow 0.25s ease;
+}
+
+/* Modal Open Animation */
+.modal-active {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+.modal-active #resume-modal-card {
+  transform: scale(1) !important;
+}
+
+/* Custom pulse for typing cursor */
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #60a5fa; }
+}
+
+#typed-tagline {
+  animation: blink 0.9s infinite;
+}
+
+/* Toast Animation */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.toast {
+  animation: slideInRight 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
